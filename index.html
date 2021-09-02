@@ -1,4 +1,4 @@
-<html lang="en">
+<html>
 
     <head>
         <meta charset="UTF-8">
@@ -254,40 +254,40 @@
         }
                             </style>
                             <script>
-                                var language = "tl"
+                                
         window.addEventListener('load', (event) => {
                                     console.log('page is fully loaded');
-                                let {lang, status} = Qs.parse(location.search, {ignoreQueryPrefix: true })
-                                language = lang
-                                document.getElementById("title").innerHTML = language == "tl" ? "Pakisagutan ang mga sumusunod para mai-connect ka sa aming Customer Support Team 😊" : "Please fill in the following details to connect you to our Customer Support team 😊"
-                                document.getElementById("name-header").innerHTML = language == "tl" ? "Pangalan" : "Name"
-                                document.getElementById("email-header").innerHTML = language == "tl" ? "Email" : "Email"
-                                document.getElementById("phone-header").innerHTML = language == "tl" ? "Cellphone Number" : "Mobile Number"
-                                document.getElementById("payment-header").innerHTML = language == "tl" ? "Payment Method" : "Payment Channel"
-                                document.getElementById("game-header").innerHTML = language == "tl" ? "Product/Game" : "Product/Game"
-                                document.getElementById("name").placeholder = language == "tl" ? "I-enter ang iyong pangalan" : "Please enter your name"
-                                document.getElementById("email").placeholder = language == "tl" ? "I-enter ang iyong email" : "Please enter your email"
-                                document.getElementById("phone").placeholder = language == "tl" ? "I-enter ang iyong cellphone number" : "Please enter your mobile number"
-                                document.getElementById("product-option").innerHTML = language == "tl" ? "I-enter ang iyong payment method " : "Please select your payment channel"
-                                document.getElementById("game-option").innerHTML = language == "tl" ? "I-enter ang iyong game/Product" : "Please select your game/product"
-                                document.getElementById("submit-button").value = language == "tl" ? "Ipasa" : "Submit"
+                                let {status} = Qs.parse(location.search, {ignoreQueryPrefix: true })
+
+                                document.getElementById("title").innerHTML= "ဟုတ်ကဲ့ လုပ်ဆောင်ပေးနေပါပြီနော် 😎 ဒါပေမဲ့ လွှဲပြောင်းပေးမဲ့ agent ပိုမိုသိရှိအောင် ဒီအချက်တွေ ဖြည့်ပေးပါဦးဗျ"
+                                document.getElementById("name-header").innerHTML ="အမည်"
+                                document.getElementById("email-header").innerHTML ="အီးမေးလိပ်စာ"
+                                document.getElementById("phone-header").innerHTML ="ဖုန်းနံပတ်"
+                                document.getElementById("payment-header").innerHTML ="ငွေပေးချေမည့်စနစ်"
+                                document.getElementById("game-header").innerHTML ="၀ယ်ယူလိုသည့် ပစ္စည်း/ဂီမ်း"
+                                document.getElementById("name").placeholder ="ကျေးဇူးပြုပြီး သင့်ရဲ့ နာမည်ကို ထည့်ပါ"
+                                document.getElementById("email").placeholder ="ကျေးဇူးပြုပြီး သင့်ရဲ့email လိပ်စာကို ထည့်ပါ"
+                                document.getElementById("phone").placeholder ="ကျေးဇူးပြုပြီး သင့်ရဲ့ဖုန်းနံပတ်ကို ထည့်ပါ"
+                                document.getElementById("product-option").innerHTML ="ကျေးဇူးပြုပြီး ငွေပေးချေမှု စနစ်ကို ရွေးချယ်ပါ"
+                                document.getElementById("game-option").innerHTML ="ကျေးဇူးပြုပြီး ဂီမ်း / ၀ယ်ယူလိုသော ပစ္စည်းကို ရွေးချယ်ပါ"
+                                document.getElementById("submit-button").value ="အတည်ပြုမည်"
                                 if (status == "offline") {
                 const message = document.createElement("h6")
-                                message.innerHTML = language == "tl" ? "Mensahe" : "Message"
+                                message.innerHTML ="Message"
                                 message.id = "message-header"
                                 document.getElementById("offline-message").appendChild(message)
                                 const messageBox = document.createElement("textarea")
                                 // messageBox.placeholder = language == "tl" ? "message" : "message"
                                 messageBox.type = "text"
                                 messageBox.id = "user-message"
-                                messageBox.name = "message"
+                                messageBox.name = "အကြောင်းအရာ"
                                 // messageBox.onchange = messageHandler()
                                 messageBox.classList.add("input-field")
                                 messageBox.style.height = "50px"
                                 document.getElementById("offline-message").appendChild(messageBox)
                                 // messageBox.setAttribute("oninput", messageHandler());
                                 const attachment = document.createElement("h6")
-                                attachment.innerHTML = language == "tl" ? "Attachment" : "Attachment"
+                                attachment.innerHTML = "Choose File"
                                 attachment.id = "attachment-header"
                                 document.getElementById("offline-message").appendChild(attachment)
                                 const attachmentInput = document.createElement("input")
@@ -336,25 +336,13 @@
         var totalSelection = []
                                 var count = 0
                                 var countrys = {
-                                    "philippines": ["7-Eleven", "Bank Transfers", "Card Payments", "Cash at retail exclude 7-11",
-                                "Coins.ph", "GCash", "Globe", "Grabpay", "PayMaya", "Smart/Sun"]
+                                    "Myanmar": ["Telenor","Ooredoo","MPT","Mytel","Wave Money","easyPoints","KBZPay","Onepay","Card Payments Myanmar"]
         }
 
                                 $(document).ready(function () {
-            var gamesArray = ["Asphlat 9: Legends","Azur Lane","Badlanders","Basketrio","Be The King: Judge Destiny","Bigo Live","Bleach Mobile 3D","Blizzard Balance","Blockman Go: Blocky Mods",
-                                "Call of Duty Mobile","Chaos Crisis","Club Vegas","Cooking Adventure","Cooking Battle","Counter Strike: Global Offensive","Crisis Action","Crusaders of Light",
-                                "Daybreak Legends","Devil Hunter","Disorder","Dragon Brawlers","Dragon Raja","Eclipse Isle","EOS Red","Era of Celestials","Food Fantasy",
-                                "Free Fire","Game of Sultans","Garena Shells Voucher","Genshin Impact","Goddess MUA","Hago","Harry Potter: Puzzles & Spells","Heroes Evolved",
-                                "Honkai Impact 3","Identity V","Idol Party","Kris Destiny: Immortal Sword","Kumu","Land of Doran","Laplace M","Last Empire Z","League of Legends: Wild Rift",
-                                "Legacy of Discord","Legends of Runeterra","LifeAfter","Light of Thel: Glory of Cepheus","LivU","Lords Mobile","Mahjong Soul","MARVEL Duel"
-                                ,"MARVEL Super War","Minecraft Voucher","Mixu","Mobile Legends","Mobile Legends: Adventure","Modern Combat 5: Blackout","MoeGirl Go!","Mr Love: Dream Date",
-                                "MU Origin 2","NBA 2K21-Steam","Netflix Voucher","Nintendo eShop (US) Voucher","OK Cupid Voucher","Omega Legends","Omlet Arcade","ONE PUNCH MAN: The Strongest",
-                                "Onmyoji Arena","PlayStation Network Vouchers","Point Blank","PUBG Mobile","PUBG Mobile Lite","PUBG Mobile UC Vouchers","Ragnarok M","Ride Out Heroes",
-                                "Rules of Survival","Saint Seiya","Samurai Era: Rise of Empires","Sky Castle","Snail Games","Spirit Land","Steam Wallet Code Voucher","Super Mecha Champions",
-                                "Tinder Direct Top Up","Tinder Voucher","Tom and Jerry: Chase","Top Eleven","Tumile","Turbo VPN","Valorant","Voucher: Black Desert SEA",
-                                "War of Rings","World War Heroes","Xbox Gift Card (US)","Zepeto"];
+            var gamesArray = ["13 poker","8Elements","Azur Lane","Badlanders","Bagan","Bagelcode","Bat Messenger","Be The King","BF Games","Bigo Live","Blockman Go: Blocky Mods","Blue Planet","BluePotion","BNB Mobitech","BOK Solitaire TriPeak","Cardboard Clash","Cerberus","CMGE","COM","Cookie TV","Cooking Battle","Crossing Void","Crusaders of Light","Crystal Tarot","Cyber Hunter","Daily Fish","Detech","Devil Hunter","Dragon Brawlers","Dragon King Fishing Online","Easysleep","Echat","Eclipse Isle","ElectronicSoul","EPL Manager","Eyou","Face Poker","FantasyBlade","Final Impact","Fincon","First Tap","Fishing Machine","Fishing Master","Fishing Rocket","Free Fire","Fun Create","FUN Pay","Gate Games","Gemstone Studio","Genshin Impact","Go Game","Gogo Live","Gold Storm Casino","Grampus","Gravity Interactive Inc","Great Sailing Media","Gunship Battle: Total Warfare","Happy Fish","Hero Rush","Heroes Evolved","Hi Poker 3D","HK Xinmo","Honkai Impact 3","Hormones","Horoscope","Horoscope villa","HR Myanmar","Idle Dungeon RPG: DIA","Idle Gog","IGG","JOOX","Joy","JoyDash Apps","JoyDash Games","KingSoft","Kris Destiny: Immortal Sword","Land of Doran","Last Empire War Z","Legacy Music","Legend of Dragon Emperor","Legend of Neverland","Lifeafter","Likee","Lilith Games","Line Kong","Long Wan","Love 3 Kingdoms","Love Meet - Video","Lucky Mojo - Daily Fortune Teller","Lucky Shan","Lucky7","Mahjong Soul","Maingames","Manga Clash","Manganuts","MARVEL Strike Force","MARVEL Super War","Master of Mainland","Melo","Mico","Miniclip","Miracle Game","Miracle M","MMBO","Mobgame","Mobile Legends Bang Bang","Mobile legends: Adventure","Mobile MMR eBook","Modern Combat 5: Blackout","Mr Love: Dream Date","MU Origin 2","Myancare","Myanma Platform","Myanmar Box Office","Myanmar Poker A7","Myanmar51 Studio","MYDIO Sing","MyMy Interactive","Mysquar","Naruto Slugfest","NAVER Z Corp","NHN Movies","Ninja Online","NJ Interactive","Ocean Arena","Ocean King","OhnPhwa Payment","Omega Legends","Omlet Arcade","Omoplay","On Doctor","One Punch Man","Opportunity Journal","Orangenat.com","Payssion","Peach Atlas","Pic Art","Piggy GO","Pirates of The Caribbean: Tides of War","Play Maker Journal","Pokdeng","PokerArts","PUBG Mobile","PUBG Mobile Lite","Rage of Dragons","Ride Out Heroes","Riley","Rise of Girls","Royal Games","Ruixun Technology","Rules of Survival","San Zarni Bo","Sellel Music","Shan Koe Mee","Shan Online","ShellFire","Shengda","Shwe Horoscope","Smile Online Cinema","Snail Games","Social APP","Speed Attack","STA Music Store","Storm Arena","Studio AMK","Survival Heroes","Sword and Magic","Talent Walker","Tales of Knight","TeamTop Game","Tencent CrossFire Legend","The Sun Music","Tinder Direct Top Up","Tom and Jerry","Trust Oo MHealth","Tuyoo","Valorant","VMG","VNG - Myanmar - MM","Vouchers :: Blizzard Balance","Vouchers :: Garena Shells","Vouchers :: Minecraft","Vouchers :: Nintendo eShop (US)","Vouchers :: Playstation Vouchers","Vouchers :: PUBG Mobile UC Redeem Code","Vouchers :: Steam Wallet Code","Vouchers :: Tinder","Vouchers :: Viu","Vshow","Wanda MM Other","Wooriline","World of Dragon Nest","World War Heroes","Vouchers :: Xbox Gift Card (US)","Xin dong","Xsolla","VivaUs","Friendium","Zabai LMS","Zepeto"];
 
-                                var countriesArray = ["philippines"]
+                                var countriesArray = ["Myanmar"]
                                 $('#games').select2({
                                     data: gamesArray
             });
@@ -379,7 +367,7 @@
             const name = document.getElementById("name")
                                 if (document.getElementById("name").value.length == 0) {
                                     name.classList.add('invalid-placeholder');
-                                document.getElementById("invalid-message").innerHTML = language == "tl" ? "Kailangan ang pangalan upang kumonekta sa isang ahente!" : "Name is required to connect an agent!"
+                                document.getElementById("invalid-message").innerHTML ="Name is required to connect an agent!"
             }
                                 else {
                                     name.classList.remove("invalid-placeholder");
@@ -391,7 +379,7 @@
             const email = document.getElementById("email")
                                 if (document.getElementById("email").value.length == 0) {
                                     email.classList.add('invalid-placeholder');
-                                document.getElementById("invalid-message").innerHTML = language == "tl" ? "Kinakailangan ang email upang kumonekta sa isang ahente!" : "Email is required to connect an agent!"
+                                document.getElementById("invalid-message").innerHTML ="Email is required to connect an agent!"
             }
                                 else {
                                     email.classList.remove("invalid-placeholder");
@@ -403,7 +391,7 @@
             const phone = document.getElementById("phone")
                                 if (document.getElementById("phone").value.length == 0) {
                                     phone.classList.add('invalid-placeholder');
-                                document.getElementById("invalid-message").innerHTML = language == "tl" ? "Kinakailangan ang numero ng telepono upang kumonekta sa isang ahente!" : "Phone number is required to connect an agent!"
+                                document.getElementById("invalid-message").innerHTML ="အေးဂျင့်နှင့် ဆက်သွယ်ပေးရန် ဖုန်းနံပတ်ထည့်သွင်းရန် လိုအပ်ပါသည်"
             }
                                 else {
                                     phone.classList.remove("invalid-placeholder");
@@ -416,7 +404,7 @@
             const message = document.getElementById("user-message")
                                 if (message.value.length == 0) {
                                     // message.classList.add('invalid-placeholder');
-                                    document.getElementById("invalid-message").innerHTML = language == "tl" ? "Ang isang mensahe ay dapat na ipadala upang kumonekta sa isang ahente" : "A message should be sent to connect to an agent"
+                                    document.getElementById("invalid-message").innerHTML ="အေးဂျင့်နှင့် ဆက်သွယ်နိုင်ရန် စာရေးပို့ရန် လိုအပ်ပါသည်"
                                 }
                                 else {
                                     // message.classList.remove("invalid-placeholder");
@@ -446,8 +434,8 @@
                                 // console.log(message.value, "Message value after submitting")
                                 if (data["payment-type"] === "null" || data.games === "null" || data.email.length == 0 || data.name.length == 0 || !emailRegex.test(data.email)) {
                 if (data.name.length == 0) {
-                                    document.getElementById("invalid-message").innerHTML = language == "tl" ? "Kailangan ang pangalan upang kumonekta sa isang ahente!" : "Name is required to connect an agent!"
-                    name.placeholder = language == "tl" ? 'Kailangan ang pangalan upang kumonekta sa isang ahente' : "Name is required to connect an agent"
+                                    document.getElementById("invalid-message").innerHTML ="Name is required to connect an agent!"
+                    name.placeholder ="အေးဂျင့်နှင့် ဆက်သွယ်ပေးရန် နာမည် ထည့်သွင်းရန် လိုအပ်ပါသည်"
                                 name.classList.add('invalid-placeholder');
                                 email.classList.remove("invalid-placeholder");
                                 phone.classList.remove("invalid-placeholder")
@@ -455,8 +443,8 @@
                                 name.focus();
                 }
                                 else if (data.email.length == 0) {
-                                    document.getElementById("invalid-message").innerHTML = language == "tl" ? "Kinakailangan ang email upang kumonekta sa isang ahente!" : "Email is required to connect an agent!"
-                    email.placeholder = language == "tl" ? 'Kinakailangan ang email upang kumonekta sa isang ahente' : "Email is required to connect an agent"
+                                    document.getElementById("invalid-message").innerHTML ="Email is required to connect an agent!"
+                    email.placeholder ="အေးဂျင့်နှင့် ဆက်သွယ်ပေးရန် email လိပ်စာ ထည့်သွင်းရန် လိုအပ်ပါသည်"
                                 email.classList.add('invalid-placeholder');
                                 name.classList.remove("invalid-placeholder");
                                 phone.classList.remove("invalid-placeholder")
@@ -464,8 +452,8 @@
                                 email.focus();
                 }
                                 else if (!emailRegex.test(data.email)) {
-                                    document.getElementById("invalid-message").innerHTML = language == "tl" ? "Kinakailangan ang wastong email upang kumonekta sa isang ahente" : "Valid email is required to connect an agent"
-                    email.placeholder = language == "tl" ? 'Kinakailangan ang wastong email upang kumonekta sa isang ahente' : "Valid email is required to connect an agent"
+                                    document.getElementById("invalid-message").innerHTML ="Valid email is required to connect an agent"
+                    email.placeholder ="အေးဂျင့်နှင့် ဆက်သွယ်နိုင်ရန် မှန်ကန်သော email လိပ်စာ ဖြစ်ရန် လိုအပ်ပါသည်"
                                 name.classList.remove("invalid-placeholder");
                                 phone.classList.remove("invalid-placeholder")
                                 message.classList.remove("invalid-placeholder")
@@ -639,7 +627,7 @@
                                             <center>
                                                 <h6 id="title"
                                                     style="color: black;text-align: left;margin-bottom: 25px;margin-top: 10px;font-size: 12px;">
-                                                    Pakisagutan ang mga sumusunod para mai-connect ka sa aming Customer Support Team 😊
+                                                    ဟုတ်ကဲ့ လုပ်ဆောင်ပေးနေပါပြီနော် 😎 ဒါပေမဲ့ လွှဲပြောင်းပေးမဲ့ agent ပိုမိုသိရှိအောင် ဒီအချက်တွေ ဖြည့်ပေးပါဦးဗျ
                                                 </h6>
                                             </center>
                                         </div>
